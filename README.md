@@ -1,4 +1,4 @@
-# 📊 Database Normalization & Interactive SQL Tool
+# Database Normalization & Interactive SQL Tool
 
 This project allows you to:
 
@@ -13,20 +13,7 @@ This project allows you to:
 
 ---
 
-## 📁 Project Structure
-
-```
-project/
-│
-├── main.py               # Main script: normalization + SQL pipeline
-├── database.py           # SQL generation and MySQL interaction
-├── employee_data.csv     # Sample dataset (can be replaced)
-└── README.md             # This file
-```
-
----
-
-## 🧰 Requirements
+## Requirements
 
 - Python 3.7+
 - MySQL Server (locally or remotely hosted)
@@ -36,9 +23,9 @@ project/
 
 ---
 
-## 🔧 Installation
+## Installation
 
-### 1. 📦 Install Python Dependencies
+### 1. Install Python Dependencies
 
 Use `pip` to install the required libraries:
 
@@ -46,9 +33,9 @@ Use `pip` to install the required libraries:
 pip install pandas mysql-connector-python
 ```
 
-### 2. 🐬 Set Up Your MySQL Server
+### 2. Set Up Your MySQL Server
 
-- Install MySQL (locally or cloud-hosted)
+- Install MySQL
 - Create a MySQL user with permissions to:
   - Create/drop databases
   - Create/modify tables
@@ -56,9 +43,9 @@ pip install pandas mysql-connector-python
 
 ---
 
-## 🚀 Usage Instructions
+## Usage Instructions
 
-### 1. ⚙️ Configure Your MySQL Settings
+### 1. Configure Your MySQL Settings
 
 Open `main.py`, and update the connection settings near the bottom:
 
@@ -81,7 +68,7 @@ interactive_sql(
 
 ---
 
-### 2. 📂 Replace Dataset (Optional)
+### 2. Replace Dataset (Optional)
 
 You can use your own CSV file by replacing `employee_data.csv`.
 
@@ -89,7 +76,7 @@ Make sure column headers are properly formatted (no empty values).
 
 ---
 
-### 3. ▶️ Run the Tool
+### 3. Run the Tool
 
 In your terminal:
 
@@ -107,7 +94,7 @@ You’ll be prompted to:
 
 ---
 
-### 4. 🧑‍💻 Interactive SQL Mode
+### 4. Interactive SQL Mode
 
 After the database is created, the terminal will enter interactive mode:
 
@@ -128,7 +115,7 @@ You can:
 
 ---
 
-## 💡 Example Functional Dependency Input
+## Example Functional Dependency Input
 
 When prompted:
 
@@ -142,25 +129,3 @@ FD: done
 Enter Primary Keys separated by a comma: EmployeeID
 ```
 
----
-
-## 📌 Notes
-
-- Data will only show up in the interactive viewer **after inserts complete** and the `DROP DATABASE` line is disabled or modified.
-- Default table names are `Table_1`, `Table_2`, etc.
-- The tool currently assumes all columns are stored as `VARCHAR(100)`.
-
----
-
-## 🛠️ To-Do / Suggested Enhancements
-
-- Auto-detect column types (`INT`, `FLOAT`, `DATE`)
-- Export results to CSV
-- Add command-line arguments for `--file`, `--db`, etc.
-- Detect BCNF and offer optional decomposition
-
----
-
-## 📞 Support
-
-If you encounter bugs or want to add features, feel free to open an issue or reach out!
